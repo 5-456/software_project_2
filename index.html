@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            bootstrap左上角展开菜单
+        </title>
+        <link rel='stylesheet' href='bootstrap.min.css'>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <style>
+@keyframes fadein{
+    0%{opacity: 0;
+         }
+    100%{
+        opacity: 1;
+
+    }
+}
+@-webkit-keyframes fadein{
+        0%{opacity: 0;
+         }
+    100%{
+        opacity: 1;
+
+    }
+}
+@-moz-keyframes fadein{
+        0%{opacity: 0;
+         }
+    100%{
+        opacity: 1;
+
+    }
+}
+@-o-keyframes fadein{
+        0%{opacity: 0;
+         }
+    100%{
+        opacity: 1;
+
+    }
+}
+@-ms-keyframes fadein{
+        0%{opacity: 0;
+         }
+    100%{
+        opacity: 1;
+
+    }
+}
+body{
+    animation:fadein 1s linear 1;
+    -webkit-animation:fadein 1s linear 1;
+    -moz-animation:fadein 1s linear 1;
+    -o-animation:fadein 1s linear 1;
+    -ms-animation:fadein 1s linear 1;
+}
+</style>
+    <body>
+        <!-- partial:index.partial.html -->
+        <header class="cd-header">
+            <div class="header-wrapper">
+                <div class="logo-wrap">
+                    <a href="#" class="hover-target"><span>your</span>logo</a>
+                </div>
+                <div class="nav-but-wrap">
+                    <div class="menu-icon hover-target">
+                        <span class="menu-icon__line menu-icon__line-left"></span><span class="menu-icon__line"></span><span class="menu-icon__line menu-icon__line-right"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="nav">
+            <div class="nav__content">
+                <ul class="nav__list">
+                    <li class="nav__list-item active-nav">
+                        <a href="list.html" class="hover-target">登记</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="search.html" class="hover-target">查询</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="date.html" class="hover-target">预约</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="#" class="hover-target">我的</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section full-height over-hide">
+            <div class="switch-wrap">
+                <h1>
+                    核酸检测登记系统
+                </h1>
+                <div id="switch" class="hover-target">
+                    <div id="circle"></div>
+                </div>
+                <p>
+                    <span>dark</span>- <span>light</span>
+                </p>
+            </div>
+        </div>
+        <div class='cursor' id="cursor"></div>
+        <div class='cursor2' id="cursor2"></div>
+        <div class='cursor3' id="cursor3"></div><!-- partial -->
+        <script src='jquery.min.js'></script>
+        <script src="./script.js"></script>
+    </body>
+</html>

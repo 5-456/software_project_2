@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='x-ua-compatible' content='ie=edge'>
+		<title>
+			jquery留言表单样式 - www.dedemao.com
+		</title>
+		<meta name='description' content='Neat'>
+		<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' user-scalable='no'>
+		<link rel='stylesheet' href='./css/style.css'>
+		<link rel="stylesheet" type="text/css" href="css/date.css">
+		<script src='./js/jquery.min.js'></script>
+		<script src="js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/date.js"></script>
+		<script type="text/javascript" src="js/iscroll_date.js"></script>
+		
+	</head>
+<style>
+@keyframes fadein{
+    0%{opacity: 0;
+         }
+    100%{
+        opacity: 1;
+
+    }
+}
+@-webkit-keyframes fadein{
+        0%{opacity: 0;
+         }
+    100%{
+        opacity: 1;
+
+    }
+}
+@-moz-keyframes fadein{
+        0%{opacity: 0;
+         }
+    100%{
+        opacity: 1;
+
+    }
+}
+@-o-keyframes fadein{
+        0%{opacity: 0;
+         }
+    100%{
+        opacity: 1;
+
+    }
+}
+@-ms-keyframes fadein{
+        0%{opacity: 0;
+         }
+    100%{
+        opacity: 1;
+
+    }
+}
+body{
+    animation:fadein 1s linear 1;
+    -webkit-animation:fadein 1s linear 1;
+    -moz-animation:fadein 1s linear 1;
+    -o-animation:fadein 1s linear 1;
+    -ms-animation:fadein 1s linear 1;
+}
+</style>
+	<body>
+		
+		<div class='main-group'>
+			<div class='box-group'>
+							<a href="index.html"><button style="cursor: pointer;
+	background: #18354a;
+	color: #F7F7F7;
+	border: 0;
+	padding: 10px 30px;
+	font-size: 14px">
+				返回
+			</button></a>
+				<div class='left-group'>
+		
+					<h3 class='title'>
+                        联系我们
+                    </h3>
+					<div class='icon-group'>
+						<ul>
+							<li>
+								<img src='./imgs/address.png' class='icon' alt=''>
+								<p>
+									南开大学津南校区
+								</p>
+							</li>
+							<li>
+								<img src='./imgs/email.png' class='icon' alt=''>
+								<p>
+									1982126814@qq.com
+								</p>
+							</li>
+							<li>
+								<img src='./imgs/mobile.png' class='icon' alt=''>
+								<p>
+									18812609234
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class='right-group'>
+			        
+					<h4 class='title'>
+                        登记检测结果
+                    </h4>
+					<form action='index.html' class='form'>
+
+						<div class='form-group'>
+							<div class='input-group w100'>
+								<input type='text' name='identification' required=""><span>身份证ID：</span>
+							</div>
+							<div class='input-group w100'>
+								<div id="datePlugin"></div>
+								<input type="text" id="dateinput" required=""/><span>检测时间</span>
+								<script>
+									$(function() {
+
+										$('#dateinput').date();
+									});
+								</script>
+								<div id="datePlugin"></div>
+							</div>
+							<div class='input-group w100'>
+								<input type='text' name='result' required=""><span>核酸结果</span>
+							</div>
+							<div class='input-group w100'>
+								<textarea name='extra' required=""></textarea><span>备注</span>
+							</div>
+							<div class='input-group w50'>
+								<button type='submit'>提 交</button>
+							</div>
+						</div>
+						
+						
+					</form>
+				    		
+				</div>
+			</div>
+		</div>&lt;/);
+	</body>
+
+</html>
