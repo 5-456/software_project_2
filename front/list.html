@@ -111,15 +111,14 @@ body{
 					<h4 class='title'>
                         登记检测结果
                     </h4>
-					<form action='index.html' class='form'>
-
+					<form action='save.php' class='form'>
 						<div class='form-group'>
 							<div class='input-group w100'>
 								<input type='text' name='identification' required=""><span>身份证ID：</span>
 							</div>
 							<div class='input-group w100'>
 								<div id="datePlugin"></div>
-								<input type="text" id="dateinput" required=""/><span>检测时间</span>
+								<input type="text" name="time" id="dateinput" required=""/><span>检测时间</span>
 								<script>
 									$(function() {
 
@@ -138,8 +137,6 @@ body{
 								<button type='submit'>提 交</button>
 							</div>
 						</div>
-						
-						
 					</form>
 				    		
 				</div>
