@@ -109,33 +109,36 @@ body{
 				<div class='right-group'>
 			        
 					<h4 class='title'>
-                        预约检测
+                        检测结果
                     </h4>
-					<form action='date.php' class='form'>
-
-						<div class='form-group'>
-							<div class='input-group w100'>
-								<input type='text' name='identification' required=""><span>身份证ID：</span>
-							</div>
-						    <div class='input-group w100'>
-								<div id="datePlugin"></div>
-								<input type="text" name='time' id="dateinput" required=""/><span>预约检测时间</span>
-								<script>
-									$(function() {
-
-										$('#dateinput').date();
-									});
-								</script>
-								<div id="datePlugin"></div>
-							</div>
-							<div class='input-group w50'>
-								<button type='submit'>提 交</button>
-							</div>
-						</div>
-						
-						
-					</form>
-				    		
+					<?php
+								$servername = "localhost";
+								$username = "root";
+								$password = "12345678";
+	
+									$id=$_GET['identification'];
+									// 创建连接
+									$conn = new mysqli($servername, $username, $password);
+									
+									// 检测连接
+									if ($conn->connect_error) {
+										die("连接失败: " . $conn->connect_error);
+									} 
+									$query="select * from sign where id='$id' ";
+									mysqli_select_db($conn,'study');//选择数据库
+									$result=mysqli_query($conn,$query);
+									$n=mysqli_num_rows($result);
+									if($n==0){
+										echo "<br>-----------------------<br>";
+										echo "no result";
+									    echo "<br>-----------------------<br>";
+									}
+									while($row=mysqli_fetch_array($result)){
+										echo "<br>-----------------------<br>";
+										echo "<li>id:&nbsp;".$row['id']."</li><li>time:&nbsp;".$row['time']."</li><li>result:&nbsp;".$row['result']."</li>";
+									    echo "<br>-----------------------<br>";
+									}
+									?>
 				</div>
 			</div>
 		</div>&lt;/);
